@@ -1,0 +1,21 @@
+import React, {
+  Component
+} from "react";
+import './Clock.css';
+
+export default class Clock extends Component {
+  render() {
+    const returnClock = () => {
+      return new Date().toLocaleString("en-US", {
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true,
+      })
+    }
+
+    const color = 'red';
+
+    return (
+       <h1 className={color}> { returnClock() }</h1>);
+  }
+}
